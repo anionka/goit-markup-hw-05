@@ -22,7 +22,7 @@
             </a>
             <nav class="nav">
                 <ul class="nav__list">
-                    <li class="nav__item"><a class="nav__link link__header" href="./index.html">Agencja</a></li>
+                    <li class="nav__item page--active"><a class="nav__link link__header" href="./index.html">Agencja</a></li>
                     <li class="nav__item"><a class="nav__link link__header" href="./portfolio.html">Portfolio</a></li>
                     <li class="nav__item"><a class="nav__link link__header" href="#">Kontakt</a></li>
                 </ul>
@@ -48,7 +48,7 @@
         <section class="banner center section">
             <div class="container">
                 <h1 class="banner__title">EFEKTYWNE ROZWIĄZANIA <br> DLA WASZEGO BIZNESU</h1>
-                <button class="banner__button banner__button:hover banner__button:focus-visible" type="button">Zamów
+                <button class="banner__button banner__button:hover banner__button:focus-visible" type="button" data-modal-open>Zamów
                     usługę</button>
             </div>
         </section>
@@ -104,13 +104,25 @@
             <div class="container">
                 <h2 class="secondary__title scope__title">Czym się zajmujemy</h2>
                 <ul class="scope__list">
-                    <li class="scope__item"><img class="scope__img" src="./images/img3_sq.jpg"
-                            alt="web designer working with graphic tablet chosing color" width="370" height="294"></li>
-                    <li class="scope__item"><img class="scope__img" src="./images/img2_sq.jpg"
-                            alt="web ui designer developing an app for mobile phone" width="370" height="294"></li>
-                    <li class="scope__item"><img class="scope__img" src="./images/img1_sq.jpg"
-                            alt="programmer typing-alghorithm, monitor and graphical tablet are on site" width="370"
-                            height="294"></li>
+                    <li class="scope__item">
+                      <img class="scope__img img--block" src="./images/img3_sq.jpg"
+                            alt="web designer working with graphic tablet chosing color" width="370" height="294">
+                      <div class="scope__overlay">
+                        <h5 class="scope-overlay__title title--over">aplikacje komputerowe</h5>
+                      </div>
+                    </li>
+                    <li class="scope__item">
+                      <img class="scope__img img--block" src="./images/img2_sq.jpg"
+                            alt="web ui designer developing an app for mobile phone" width="370" height="294">
+                      <div class="scope__overlay"><h5 class="scope-overlay__title title--over">aplikacje mobilne</h5>
+                      </div>
+                    </li>
+                    <li class="scope__item">
+                      <img class="scope__img img--block" src="./images/img1_sq.jpg"
+                            alt="programmer typing-alghorithm, monitor and graphical tablet are on site" width="370" height="294">
+                      <div class="scope__overlay"><h5 class="scope-overlay__title title--over">rozwiązania graficzne</h5>
+                      </div>
+                    </li>
                 </ul>
             </div>
         </section>
