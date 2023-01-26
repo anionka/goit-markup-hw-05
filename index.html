@@ -48,8 +48,7 @@
         <section class="banner center section">
             <div class="container">
                 <h1 class="banner__title">EFEKTYWNE ROZWIĄZANIA <br> DLA WASZEGO BIZNESU</h1>
-                <button class="banner__button banner__button:hover banner__button:focus-visible" type="button" data-modal-open>Zamów
-                    usługę</button>
+                <button class="banner__button" type="button" data-modal-open>Zamów usługę</button>
             </div>
         </section>
         <!--sekcja nasze atuty -->
@@ -387,6 +386,16 @@
        </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal__button--close" type="button" data-modal-close>
+          <svg class="modal__svg-close" width="11" height="11">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
