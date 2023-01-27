@@ -16,12 +16,7 @@
   --font-color-hover: #2196f3; /* 4: hover and logo "web" part*/
   --font-color-white: #fff; /* 4: h1, button in h1, street, logo part footer, portfolio-button:hover */
   --font-color-black: #000; /* 4: logo-part header,  */
-  --font-color-contact-footer: rgba(
-    255,
-    255,
-    255,
-    0.6
-  ); /* 4: footer mail & phone */
+  --font-color-contact-footer: rgba(255,255,255,0.6); /* 4: footer mail & phone */
 
   /* BACKGROUND */
   --bgcolor: #fff; /* main */
@@ -60,8 +55,6 @@
   --shadow-modal: 0px 1px 3px rgba(0, 0, 0, 0.12),
   0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
-/* TRANSITIONS */
-/* transition: [property] [duration] [timing-function] [delay] */
 
 
 /* general classes & settings*/
@@ -90,11 +83,12 @@ ul {
 } 
 /* MODAL */
 .backdrop {
-	width: 100vw;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
 	background-color: rgba(0, 0, 0, 0.2);
-	position: absolute;
+	position: fixed;
   inset: 0;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -117,9 +111,6 @@ ul {
   pointer-events: none;
   visibility: hidden;
   opacity: 0;
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 50%;
-  transform: translateY(-100%);
 }
 
 .modal__button--close {
@@ -137,27 +128,46 @@ ul {
   fill: black;
 } 
 
-
+/* TRANSITIONS */
+/* transition: [property] [duration] [timing-function] [delay] */
+/* --transition-color: color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+/* --transition-bgcolor: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+/* --transition-shadow: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+/*--transition-transform: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);*/
+/*--transition-border-color: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);*/
+/*--transition-fill: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+/* --tranasition-modal: transform 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  border-radius 1000ms linear, visibility 300ms linear, opacity 500ms ease; */
 
 
 /* PSEUDOCLASSES */
 .hover:hover,
 .hover:focus-visible {
   background-color: var(--bgcolor-button-filter-hover);
+  /* transition: var(--transition-bgcolor); */
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--font-color-white);
+  /* transition: var(--transition-color); */
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: var(--shadow-button-menu-hover);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition: var(--transition-bgcolor), var(--transition-color), var(--transition-shadow); 
+  -DLACZEGO TO NIE DZIAŁA??*/
 }
 .banner__button:hover,
 .banner__button:focus-visible {
   background-color: var(--bgcolor-button-banner-hover);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link--hover:hover,
 .link--hover:focus-visible {
   color: var(--font-color-contact-footer);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link__header:hover,
 .link__header:focus-visible {
   color: var(--font-color-hover);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact__link:hover > .contact__svg,
 .contact__link:focus > .contact__svg {
@@ -167,24 +177,31 @@ ul {
 .client__link:hover,
 .client__link:focus {
   --color5: var(--font-color-hover);
-  border: var(--border-client-items-hover)
+  border: var(--border-client-items-hover);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* social media */
 .smedia__logo:hover,
 .smedia__logo:focus-visible {
   --color5: var(--font-color-white);
   background-color: var(--font-color-hover);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer .social__logo {
   background-color: var(--bgcolor-smedia-footer);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* cards */
 .card__item:hover {
   box-shadow: var(--shadow-portfolio-card-item-hover);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card__item:hover .card__overlay {
   transform: translateY(0);
   pointer-events: auto;
+}
+.modal__button--close:hover {
+background-color: #b4c0c9;
 }
 
 /* general body settings */
